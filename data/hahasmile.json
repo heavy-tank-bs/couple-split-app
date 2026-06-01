@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-06-01T03:58:34.471Z"
+    "updatedAt": "2026-06-01T04:15:51.316Z"
   },
   "settings": {
     "currency": "JPY",
@@ -26,5 +26,16 @@
       "color": "#b45309"
     }
   ],
-  "expenses": []
+  "expenses": [
+    {
+      "id": "exp-mpup3ujl-7ov5m7",
+      "date": "2026-06-01",
+      "item": "amazon キッチン周り",
+      "category": "日用品",
+      "amount": 10394,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    }
+  ]
 }
