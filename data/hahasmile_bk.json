@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "appVersion": "1.0.0",
+    "updatedAt": "2026-06-01T23:36:53.803Z"
+  },
+  "settings": {
+    "currency": "JPY",
+    "github": {
+      "owner": "heavy-tank-bs",
+      "repo": "couple-split-app",
+      "branch": "main",
+      "path": "data/hahasmile_bk.json"
+    }
+  },
+  "people": [
+    {
+      "id": "person-mpuohohw-11klb7",
+      "name": "南はるか",
+      "share": 50,
+      "color": "#0f766e"
+    },
+    {
+      "id": "person-mpuohrkw-30ffkd",
+      "name": "玉真拓雄",
+      "share": 50,
+      "color": "#b45309"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "exp-mpup3ujl-7ov5m7",
+      "date": "2026-06-01",
+      "item": "amazon キッチン周り",
+      "category": "日用品",
+      "amount": 10394,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mpvukom6-5td4b1",
+      "date": "2026-06-02",
+      "item": "ガスホース+ソケット+物干し",
+      "category": "日用品",
+      "amount": 4729,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    }
+  ]
+}
