@@ -147,7 +147,7 @@
               </div>
             </form>
             <p class="helper-text">
-              tokenは画面内だけで使い、localStorageには保存しません。公開リポジトリの読み込みだけならtokenなしでも動きます。
+              tokenはこのブラウザのlocalStorageに保存します。公開リポジトリの読み込みだけならtokenなしでも動きます。
             </p>
           </section>
         </section>
@@ -201,6 +201,8 @@
         </section>
       </main>
     </div>
+
+    <div class="popup-stack" id="popupStack" aria-live="assertive" aria-atomic="true"></div>
 
     <template id="emptyStateTemplate">
       <div class="empty-state">

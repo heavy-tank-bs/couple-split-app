@@ -356,6 +356,57 @@ legend {
   line-height: 1.6;
 }
 
+.popup-stack {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 50;
+  display: grid;
+  gap: 10px;
+  width: min(360px, calc(100vw - 28px));
+  pointer-events: none;
+}
+
+.popup {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: start;
+  border: 1px solid rgba(15, 118, 110, 0.26);
+  border-radius: 8px;
+  padding: 13px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(24, 33, 43, 0.18);
+  pointer-events: auto;
+}
+
+.popup.is-error {
+  border-color: rgba(185, 28, 28, 0.35);
+}
+
+.popup strong {
+  display: block;
+  font-size: 14px;
+}
+
+.popup span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.popup button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--ink);
+  font-weight: 800;
+}
+
 .hidden {
   display: none !important;
 }
@@ -757,6 +808,12 @@ legend {
 
   .topbar-actions {
     justify-content: flex-start;
+  }
+
+  .popup-stack {
+    right: 10px;
+    bottom: 10px;
+    width: calc(100vw - 20px);
   }
 
   .topbar h1 {

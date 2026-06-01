@@ -92,6 +92,7 @@
     githubSha: document.querySelector("#githubSha"),
     loadGithub: document.querySelector("#loadGithub"),
     saveGithub: document.querySelector("#saveGithub"),
+    popupStack: document.querySelector("#popupStack"),
     emptyStateTemplate: document.querySelector("#emptyStateTemplate"),
   };
 
@@ -107,6 +108,7 @@
     els.githubRepo.value = github.repo || "";
     els.githubBranch.value = github.branch || "main";
     els.githubPath.value = github.path || "data/split-data.json";
+    els.githubToken.value = github.token || "";
 
     bindEvents();
     render();
@@ -618,6 +620,7 @@
     const config = getGithubConfig();
     if (!config.owner || !config.repo || !config.path) {
       setStatus("GitHubのOwner、Repository、JSON pathを入力してください", "error");
+      showPopup("GitHubから取得できません", "Owner、Repository、JSON pathを入力してください。", "error");
       return;
     }
 
@@ -647,8 +650,10 @@
       render();
       setGithubSha();
       setStatus("GitHubの最新JSONを読み込みました", "success");
+      showPopup("GitHubから取得しました", "最新のJSONデータをアプリに反映しました。", "success");
     } catch (error) {
       setStatus(`GitHub取得に失敗しました: ${error.message}`, "error");
+      showPopup("GitHubから取得できませんでした", error.message, "error");
     }
   }
 
@@ -656,6 +661,7 @@
     const config = getGithubConfig();
     if (!config.owner || !config.repo || !config.path || !config.token) {
       setStatus("GitHub保存にはOwner、Repository、JSON path、tokenが必要です", "error");
+      showPopup("GitHubへ保存できません", "Owner、Repository、JSON path、tokenを入力してください。", "error");
       return;
     }
 
@@ -705,8 +711,10 @@
       storeData();
       setGithubSha();
       setStatus("GitHubのJSONを更新しました", "success");
+      showPopup("GitHubへ保存しました", "JSONデータをリポジトリへ保存しました。", "success");
     } catch (error) {
       setStatus(`GitHub保存に失敗しました: ${error.message}`, "error");
+      showPopup("GitHubへ保存できませんでした", error.message, "error");
     }
   }
 
@@ -722,14 +730,20 @@
 
   function saveGithubConfig() {
     const config = getGithubConfig();
-    const publicConfig = {
+    const storedConfig = {
+      owner: config.owner,
+      repo: config.repo,
+      branch: config.branch,
+      path: config.path,
+      token: config.token,
+    };
+    localStorage.setItem(CONFIG_KEY, JSON.stringify(storedConfig));
+    state.data.settings.github = {
       owner: config.owner,
       repo: config.repo,
       branch: config.branch,
       path: config.path,
     };
-    localStorage.setItem(CONFIG_KEY, JSON.stringify(publicConfig));
-    state.data.settings.github = publicConfig;
     setGithubSha();
   }
 
@@ -880,6 +894,28 @@
     els.syncStatus.textContent = message;
     els.syncStatus.classList.toggle("is-error", type === "error");
     els.syncStatus.classList.toggle("is-success", type === "success");
+  }
+
+  function showPopup(title, message, type = "") {
+    if (!els.popupStack) return;
+
+    const popup = document.createElement("div");
+    popup.className = `popup ${type === "error" ? "is-error" : "is-success"}`;
+    popup.setAttribute("role", "alert");
+    popup.innerHTML = `
+      <div>
+        <strong>${escapeHtml(title)}</strong>
+        <span>${escapeHtml(message)}</span>
+      </div>
+      <button type="button" aria-label="閉じる">×</button>
+    `;
+
+    const close = () => {
+      popup.remove();
+    };
+    popup.querySelector("button").addEventListener("click", close);
+    els.popupStack.appendChild(popup);
+    window.setTimeout(close, type === "error" ? 7000 : 4500);
   }
 
   function createId(prefix) {
