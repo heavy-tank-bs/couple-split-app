@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "appVersion": "1.0.0",
+    "updatedAt": "2026-06-01T00:00:00.000Z"
+  },
+  "settings": {
+    "currency": "JPY",
+    "github": {
+      "owner": "",
+      "repo": "",
+      "branch": "main",
+      "path": "data/split-data.json"
+    }
+  },
+  "people": [
+    {
+      "id": "person-a",
+      "name": "Aさん",
+      "share": 50,
+      "color": "#0f766e"
+    },
+    {
+      "id": "person-b",
+      "name": "Bさん",
+      "share": 50,
+      "color": "#b45309"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "exp-sample-1",
+      "date": "2026-06-01",
+      "item": "スーパー",
+      "category": "食費",
+      "amount": 4200,
+      "payerId": "person-a",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-sample-2",
+      "date": "2026-06-01",
+      "item": "日用品",
+      "category": "日用品",
+      "amount": 1800,
+      "payerId": "person-b",
+      "splitMode": "custom",
+      "shares": {
+        "person-a": 70,
+        "person-b": 30
+      }
+    }
+  ]
+}

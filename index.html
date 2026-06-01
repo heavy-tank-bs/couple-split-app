@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>二人暮らし家計シェア</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Household split ledger</p>
+          <h1>二人暮らし家計シェア</h1>
+        </div>
+        <div class="sync-status" id="syncStatus" aria-live="polite">ローカル保存済み</div>
+      </header>
+
+      <main class="layout">
+        <section class="left-column" aria-label="入力と設定">
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Step 1</p>
+                <h2>支払い担当</h2>
+              </div>
+              <span class="small-note" id="shareTotalNote">合計 100%</span>
+            </div>
+
+            <form class="member-form" id="memberForm">
+              <input type="hidden" id="memberId" />
+              <label>
+                名前
+                <input id="memberName" type="text" maxlength="24" placeholder="例: 佐藤" required />
+              </label>
+              <label>
+                負担割合
+                <div class="input-with-unit">
+                  <input id="memberShare" type="number" min="0" max="100" step="1" value="50" required />
+                  <span>%</span>
+                </div>
+              </label>
+              <label>
+                色
+                <input id="memberColor" type="color" value="#0f766e" />
+              </label>
+              <button type="submit" class="primary-btn" id="memberSubmit">登録</button>
+              <button type="button" class="ghost-btn hidden" id="memberCancel">取消</button>
+            </form>
+
+            <div class="member-list" id="memberList" aria-live="polite"></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Step 2</p>
+                <h2>支出登録</h2>
+              </div>
+              <span class="small-note">月別に自動集計</span>
+            </div>
+
+            <form class="expense-form" id="expenseForm">
+              <label>
+                日付
+                <input id="expenseDate" type="date" required />
+              </label>
+              <label>
+                項目
+                <input id="expenseItem" type="text" maxlength="48" placeholder="例: スーパー" required />
+              </label>
+              <label>
+                カテゴリ
+                <select id="expenseCategory">
+                  <option>食費</option>
+                  <option>日用品</option>
+                  <option>家賃</option>
+                  <option>光熱費</option>
+                  <option>通信費</option>
+                  <option>外食</option>
+                  <option>その他</option>
+                </select>
+              </label>
+              <label>
+                値段
+                <div class="input-with-unit">
+                  <span>¥</span>
+                  <input id="expenseAmount" type="number" min="1" step="1" placeholder="4200" required />
+                </div>
+              </label>
+              <label>
+                支払い担当
+                <select id="expensePayer" required></select>
+              </label>
+              <fieldset>
+                <legend>負担方法</legend>
+                <label class="choice">
+                  <input type="radio" name="splitMode" value="default" checked />
+                  登録済み割合で負担
+                </label>
+                <label class="choice">
+                  <input type="radio" name="splitMode" value="custom" />
+                  この支出だけ割合を変更
+                </label>
+              </fieldset>
+              <div class="custom-shares hidden" id="customShares"></div>
+              <button type="submit" class="primary-btn wide">支出を登録</button>
+            </form>
+          </section>
+
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">GitHub JSON</p>
+                <h2>データ同期</h2>
+              </div>
+              <span class="small-note" id="githubSha">未接続</span>
+            </div>
+
+            <form class="github-form" id="githubForm">
+              <label>
+                Owner
+                <input id="githubOwner" type="text" placeholder="github-user" autocomplete="off" />
+              </label>
+              <label>
+                Repository
+                <input id="githubRepo" type="text" placeholder="household-split-data" autocomplete="off" />
+              </label>
+              <label>
+                Branch
+                <input id="githubBranch" type="text" value="main" autocomplete="off" />
+              </label>
+              <label>
+                JSON path
+                <input id="githubPath" type="text" value="data/split-data.json" autocomplete="off" />
+              </label>
+              <label class="full">
+                GitHub token
+                <input id="githubToken" type="password" placeholder="Contents read/write token" autocomplete="off" />
+              </label>
+              <div class="button-row full">
+                <button type="button" class="secondary-btn" id="loadGithub">GitHubから最新取得</button>
+                <button type="button" class="primary-btn" id="saveGithub">GitHubへ保存</button>
+              </div>
+            </form>
+            <p class="helper-text">
+              tokenは画面内だけで使い、localStorageには保存しません。公開リポジトリの読み込みだけならtokenなしでも動きます。
+            </p>
+          </section>
+        </section>
+
+        <section class="right-column" aria-label="月別可視化">
+          <section class="summary-hero">
+            <div>
+              <p class="eyebrow">Monthly view</p>
+              <h2 id="monthTitle">今月の精算</h2>
+            </div>
+            <label class="month-picker">
+              表示月
+              <input id="monthFilter" type="month" />
+            </label>
+          </section>
+
+          <section class="metrics-grid" id="metricsGrid"></section>
+
+          <section class="panel settlement-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Settlement</p>
+                <h2>誰がいくら渡すか</h2>
+              </div>
+              <span class="small-note" id="settlementStatus">計算中</span>
+            </div>
+            <div id="settlementList" class="settlement-list"></div>
+          </section>
+
+          <section class="visual-grid">
+            <section class="panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Ratio</p>
+                  <h2>負担割合と支払い実績</h2>
+                </div>
+              </div>
+              <div id="ratioBars" class="ratio-bars"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">Category</p>
+                  <h2>カテゴリ別</h2>
+                </div>
+              </div>
+              <div id="categoryBars" class="category-bars"></div>
+            </section>
+          </section>
+
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Ledger</p>
+                <h2>支出一覧</h2>
+              </div>
+              <span class="small-note" id="expenseCount">0件</span>
+            </div>
+            <div class="expense-table-wrap">
+              <table class="expense-table">
+                <thead>
+                  <tr>
+                    <th>日付</th>
+                    <th>項目</th>
+                    <th>カテゴリ</th>
+                    <th>支払</th>
+                    <th class="num">金額</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="expenseTable"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <template id="emptyStateTemplate">
+      <div class="empty-state">
+        <strong>まだデータがありません</strong>
+        <span>支払い担当と支出を登録すると、月ごとの精算額が表示されます。</span>
+      </div>
+    </template>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
