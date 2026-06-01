@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-06-01T04:15:51.316Z"
+    "updatedAt": "2026-06-01T08:55:12.416Z"
   },
   "settings": {
     "currency": "JPY",
@@ -34,6 +34,16 @@
       "category": "日用品",
       "amount": 10394,
       "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mpuz3ina-s3j62f",
+      "date": "2026-06-01",
+      "item": "ガスホース代",
+      "category": "日用品",
+      "amount": 1628,
+      "payerId": "person-mpuohohw-11klb7",
       "splitMode": "default",
       "shares": {}
     }
