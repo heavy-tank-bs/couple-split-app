@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "appVersion": "1.0.0",
+    "updatedAt": "2026-06-01T03:58:34.471Z"
+  },
+  "settings": {
+    "currency": "JPY",
+    "github": {
+      "owner": "heavy-tank-bs",
+      "repo": "couple-split-app",
+      "branch": "main",
+      "path": "data/hahasmile.json"
+    }
+  },
+  "people": [
+    {
+      "id": "person-mpuohohw-11klb7",
+      "name": "南はるか",
+      "share": 50,
+      "color": "#0f766e"
+    },
+    {
+      "id": "person-mpuohrkw-30ffkd",
+      "name": "玉真拓雄",
+      "share": 50,
+      "color": "#b45309"
+    }
+  ],
+  "expenses": []
+}
