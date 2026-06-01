@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-06-01T23:33:55.873Z"
+    "updatedAt": "2026-06-01T23:35:05.703Z"
   },
   "settings": {
     "currency": "JPY",
@@ -38,32 +38,12 @@
       "shares": {}
     },
     {
-      "id": "exp-mpvue3rx-91zvx2",
+      "id": "exp-mpvuj1gf-f1k960",
       "date": "2026-06-02",
       "item": "ガスホース代",
-      "category": "日用品",
+      "category": "食費",
       "amount": 1628,
-      "payerId": "person-mpuohrkw-30ffkd",
-      "splitMode": "default",
-      "shares": {}
-    },
-    {
-      "id": "exp-mpvugjym-u4wb0s",
-      "date": "2026-06-02",
-      "item": "ガスコンロソケット",
-      "category": "日用品",
-      "amount": 1909,
-      "payerId": "person-mpuohrkw-30ffkd",
-      "splitMode": "default",
-      "shares": {}
-    },
-    {
-      "id": "exp-mpvuhf55-kvhhvc",
-      "date": "2026-06-02",
-      "item": "バスタオル干し",
-      "category": "日用品",
-      "amount": 1192,
-      "payerId": "person-mpuohrkw-30ffkd",
+      "payerId": "person-mpuohohw-11klb7",
       "splitMode": "default",
       "shares": {}
     }
