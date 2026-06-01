@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>支出一覧 | 二人暮らし家計シェア</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Expense ledger</p>
+          <h1>支出一覧</h1>
+        </div>
+        <div class="topbar-actions">
+          <a class="nav-link" href="index.html">精算入力へ</a>
+          <div class="sync-status" id="ledgerStatus" aria-live="polite">ローカルデータ表示中</div>
+        </div>
+      </header>
+
+      <main class="ledger-page">
+        <section class="summary-hero">
+          <div>
+            <p class="eyebrow">Monthly ledger</p>
+            <h2 id="ledgerMonthTitle">月別の支出</h2>
+          </div>
+          <label class="month-picker">
+            表示月
+            <input id="ledgerMonthFilter" type="month" />
+          </label>
+        </section>
+
+        <section class="month-chip-row" id="monthChips" aria-label="月の切り替え"></section>
+
+        <section class="metrics-grid" id="ledgerMetrics"></section>
+
+        <section class="visual-grid">
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Trend</p>
+                <h2>月別推移</h2>
+              </div>
+            </div>
+            <div id="trendBars" class="trend-bars"></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Payer</p>
+                <h2>支払者別</h2>
+              </div>
+            </div>
+            <div id="payerBars" class="category-bars"></div>
+          </section>
+        </section>
+
+        <section class="visual-grid">
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Category</p>
+                <h2>カテゴリ別</h2>
+              </div>
+            </div>
+            <div id="ledgerCategoryBars" class="category-bars"></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Split mode</p>
+                <h2>負担方法別</h2>
+              </div>
+            </div>
+            <div id="splitModeBars" class="category-bars"></div>
+          </section>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Ledger</p>
+              <h2>月別支出一覧</h2>
+            </div>
+            <span class="small-note" id="ledgerExpenseCount">0件</span>
+          </div>
+          <div class="expense-table-wrap">
+            <table class="expense-table">
+              <thead>
+                <tr>
+                  <th>日付</th>
+                  <th>項目</th>
+                  <th>カテゴリ</th>
+                  <th>支払</th>
+                  <th>負担方法</th>
+                  <th class="num">金額</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="ledgerExpenseTable"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <template id="emptyStateTemplate">
+      <div class="empty-state">
+        <strong>まだデータがありません</strong>
+        <span>トップページで支出を登録すると、ここに月別の一覧とグラフが表示されます。</span>
+      </div>
+    </template>
+
+    <script src="js/expenses.js"></script>
+  </body>
+</html>

@@ -119,7 +119,9 @@
     els.memberList.addEventListener("click", handleMemberAction);
     els.expenseForm.addEventListener("submit", handleExpenseSubmit);
     els.expenseForm.addEventListener("change", handleSplitModeChange);
-    els.expenseTable.addEventListener("click", handleExpenseAction);
+    if (els.expenseTable) {
+      els.expenseTable.addEventListener("click", handleExpenseAction);
+    }
     els.monthFilter.addEventListener("change", render);
     els.githubForm.addEventListener("input", saveGithubConfig);
     els.loadGithub.addEventListener("click", loadFromGithub);
@@ -498,12 +500,16 @@
   }
 
   function renderExpenses(expenses) {
+    if (!els.expenseCount || !els.expenseTable) {
+      return;
+    }
+
     els.expenseCount.textContent = `${expenses.length}件`;
 
     if (!expenses.length) {
       els.expenseTable.innerHTML = `
         <tr>
-          <td colspan="6">${emptyStateHtml("この月の支出はまだありません")}</td>
+          <td colspan="6" class="empty-cell">${emptyStateHtml("この月の支出はまだありません")}</td>
         </tr>
       `;
       return;
@@ -514,12 +520,12 @@
         const payer = getPerson(expense.payerId);
         return `
           <tr>
-            <td>${escapeHtml(expense.date)}</td>
-            <td>${escapeHtml(expense.item)}</td>
-            <td><span class="tag">${escapeHtml(expense.category)}</span></td>
-            <td>${escapeHtml(payer ? payer.name : "不明")}</td>
-            <td class="num">${formatMoney(expense.amount)}</td>
-            <td class="num">
+            <td data-label="日付">${escapeHtml(expense.date)}</td>
+            <td data-label="項目">${escapeHtml(expense.item)}</td>
+            <td data-label="カテゴリ"><span class="tag">${escapeHtml(expense.category)}</span></td>
+            <td data-label="支払">${escapeHtml(payer ? payer.name : "不明")}</td>
+            <td class="num" data-label="金額">${formatMoney(expense.amount)}</td>
+            <td class="num" data-label="操作">
               <button class="icon-btn danger-btn" type="button" data-expense-action="delete" data-id="${escapeHtml(expense.id)}">削除</button>
             </td>
           </tr>

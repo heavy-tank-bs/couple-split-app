@@ -13,7 +13,10 @@
           <p class="eyebrow">Household split ledger</p>
           <h1>二人暮らし家計シェア</h1>
         </div>
-        <div class="sync-status" id="syncStatus" aria-live="polite">ローカル保存済み</div>
+        <div class="topbar-actions">
+          <a class="nav-link" href="expenses.html">支出一覧</a>
+          <div class="sync-status" id="syncStatus" aria-live="polite">ローカル保存済み</div>
+        </div>
       </header>
 
       <main class="layout">
@@ -194,31 +197,6 @@
               </div>
               <div id="categoryBars" class="category-bars"></div>
             </section>
-          </section>
-
-          <section class="panel">
-            <div class="panel-heading">
-              <div>
-                <p class="eyebrow">Ledger</p>
-                <h2>支出一覧</h2>
-              </div>
-              <span class="small-note" id="expenseCount">0件</span>
-            </div>
-            <div class="expense-table-wrap">
-              <table class="expense-table">
-                <thead>
-                  <tr>
-                    <th>日付</th>
-                    <th>項目</th>
-                    <th>カテゴリ</th>
-                    <th>支払</th>
-                    <th class="num">金額</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody id="expenseTable"></tbody>
-              </table>
-            </div>
           </section>
         </section>
       </main>
