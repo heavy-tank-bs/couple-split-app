@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-06-01T23:35:05.703Z"
+    "updatedAt": "2026-06-01T23:36:22.390Z"
   },
   "settings": {
     "currency": "JPY",
@@ -38,12 +38,12 @@
       "shares": {}
     },
     {
-      "id": "exp-mpvuj1gf-f1k960",
+      "id": "exp-mpvukom6-5td4b1",
       "date": "2026-06-02",
-      "item": "ガスホース代",
-      "category": "食費",
-      "amount": 1628,
-      "payerId": "person-mpuohohw-11klb7",
+      "item": "ガスホース+ソケット+物干し",
+      "category": "日用品",
+      "amount": 4729,
+      "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
     }
