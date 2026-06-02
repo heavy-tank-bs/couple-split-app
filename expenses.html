@@ -107,6 +107,66 @@
       </main>
     </div>
 
+    <div class="modal-backdrop hidden" id="expenseEditModal" role="dialog" aria-modal="true" aria-labelledby="expenseEditTitle">
+      <form class="modal-panel edit-expense-form" id="expenseEditForm">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Edit expense</p>
+            <h2 id="expenseEditTitle">支出を編集</h2>
+          </div>
+          <button type="button" class="icon-btn" id="expenseEditCancel" aria-label="編集を閉じる">閉じる</button>
+        </div>
+        <input type="hidden" id="editExpenseId" />
+        <label>
+          日付
+          <input id="editExpenseDate" type="date" required />
+        </label>
+        <label>
+          項目
+          <input id="editExpenseItem" type="text" maxlength="48" required />
+        </label>
+        <label>
+          カテゴリ
+          <select id="editExpenseCategory">
+            <option>食費</option>
+            <option>日用品</option>
+            <option>家賃</option>
+            <option>光熱費</option>
+            <option>通信費</option>
+            <option>外食</option>
+            <option>その他</option>
+          </select>
+        </label>
+        <label>
+          値段
+          <div class="input-with-unit">
+            <span>¥</span>
+            <input id="editExpenseAmount" type="number" min="1" step="1" required />
+          </div>
+        </label>
+        <label>
+          支払い担当
+          <select id="editExpensePayer" required></select>
+        </label>
+        <fieldset>
+          <legend>負担方法</legend>
+          <label class="choice">
+            <input type="radio" name="editSplitMode" value="default" checked />
+            登録済み割合で負担
+          </label>
+          <label class="choice">
+            <input type="radio" name="editSplitMode" value="custom" />
+            この支出だけ割合を変更
+          </label>
+        </fieldset>
+        <div class="custom-shares hidden" id="editCustomShares"></div>
+        <div class="button-row full">
+          <button type="submit" class="primary-btn">変更を保存</button>
+          <button type="button" class="ghost-btn" id="expenseEditCancelBottom">キャンセル</button>
+        </div>
+      </form>
+    </div>
+
     <template id="emptyStateTemplate">
       <div class="empty-state">
         <strong>まだデータがありません</strong>

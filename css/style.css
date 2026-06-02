@@ -407,6 +407,45 @@ legend {
   font-weight: 800;
 }
 
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(24, 33, 43, 0.42);
+}
+
+.modal-panel {
+  width: min(620px, 100%);
+  max-height: min(820px, calc(100vh - 36px));
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+  background: var(--surface);
+  box-shadow: 0 24px 70px rgba(24, 33, 43, 0.24);
+}
+
+.edit-expense-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.edit-expense-form .panel-heading,
+.edit-expense-form fieldset,
+.edit-expense-form .custom-shares {
+  grid-column: 1 / -1;
+}
+
+.row-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
 .hidden {
   display: none !important;
 }
@@ -816,6 +855,16 @@ legend {
     width: calc(100vw - 20px);
   }
 
+  .modal-backdrop {
+    align-items: end;
+    padding: 10px;
+  }
+
+  .modal-panel {
+    max-height: calc(100vh - 20px);
+    padding: 14px;
+  }
+
   .topbar h1 {
     font-size: 28px;
     line-height: 1.15;
@@ -848,6 +897,7 @@ legend {
   .member-form,
   .expense-form,
   .github-form,
+  .edit-expense-form,
   .metrics-grid,
   .custom-shares,
   fieldset {
@@ -867,6 +917,14 @@ legend {
     min-width: 54px;
     padding: 0 8px;
     width: auto;
+  }
+
+  .row-actions {
+    justify-content: stretch;
+  }
+
+  .row-actions .icon-btn {
+    flex: 1 1 0;
   }
 
   .button-row {

@@ -59,6 +59,17 @@
     splitModeBars: document.querySelector("#splitModeBars"),
     expenseCount: document.querySelector("#ledgerExpenseCount"),
     expenseTable: document.querySelector("#ledgerExpenseTable"),
+    editModal: document.querySelector("#expenseEditModal"),
+    editForm: document.querySelector("#expenseEditForm"),
+    editId: document.querySelector("#editExpenseId"),
+    editDate: document.querySelector("#editExpenseDate"),
+    editItem: document.querySelector("#editExpenseItem"),
+    editCategory: document.querySelector("#editExpenseCategory"),
+    editAmount: document.querySelector("#editExpenseAmount"),
+    editPayer: document.querySelector("#editExpensePayer"),
+    editCustomShares: document.querySelector("#editCustomShares"),
+    editCancel: document.querySelector("#expenseEditCancel"),
+    editCancelBottom: document.querySelector("#expenseEditCancelBottom"),
     emptyStateTemplate: document.querySelector("#emptyStateTemplate"),
   };
 
@@ -70,6 +81,12 @@
     els.monthFilter.addEventListener("change", render);
     els.monthChips.addEventListener("click", handleMonthChipClick);
     els.expenseTable.addEventListener("click", handleExpenseAction);
+    els.editForm.addEventListener("submit", handleEditSubmit);
+    els.editForm.addEventListener("change", handleEditSplitModeChange);
+    els.editCancel.addEventListener("click", closeEditModal);
+    els.editCancelBottom.addEventListener("click", closeEditModal);
+    els.editModal.addEventListener("click", handleModalBackdropClick);
+    document.addEventListener("keydown", handleEscapeKey);
     window.addEventListener("storage", handleStorageEvent);
     render();
     loadBundledDataIfNeeded();
@@ -87,11 +104,81 @@
     const button = event.target.closest("button[data-expense-action]");
     if (!button) return;
 
+    if (button.dataset.expenseAction === "edit") {
+      openEditModal(button.dataset.id);
+      return;
+    }
+
     if (button.dataset.expenseAction === "delete") {
       state.data.expenses = state.data.expenses.filter((expense) => expense.id !== button.dataset.id);
       touchAndStore();
       render();
       setStatus("支出を削除しました", "success");
+    }
+  }
+
+  function handleEditSubmit(event) {
+    event.preventDefault();
+
+    const id = els.editId.value;
+    const splitMode = getEditSplitMode();
+    const amount = Number(els.editAmount.value);
+    const shares = splitMode === "custom" ? readEditCustomShares() : {};
+
+    if (!Number.isFinite(amount) || amount <= 0) {
+      setStatus("値段は1円以上で入力してください", "error");
+      return;
+    }
+
+    if (!getPerson(els.editPayer.value)) {
+      setStatus("支払い担当を選択してください", "error");
+      return;
+    }
+
+    if (splitMode === "custom") {
+      const total = sum(Object.values(shares));
+      if (Math.abs(total - 100) > 0.01) {
+        setStatus("この支出の負担割合は合計100%にしてください", "error");
+        return;
+      }
+    }
+
+    state.data.expenses = state.data.expenses.map((expense) =>
+      expense.id === id
+        ? {
+            ...expense,
+            date: els.editDate.value,
+            item: els.editItem.value.trim() || "未入力",
+            category: els.editCategory.value,
+            amount: Math.round(amount),
+            payerId: els.editPayer.value,
+            splitMode,
+            shares,
+          }
+        : expense,
+    );
+
+    els.monthFilter.value = toMonthKey(els.editDate.value);
+    touchAndStore();
+    closeEditModal();
+    render();
+    setStatus("支出を更新しました", "success");
+  }
+
+  function handleEditSplitModeChange(event) {
+    if (event.target.name !== "editSplitMode") return;
+    els.editCustomShares.classList.toggle("hidden", getEditSplitMode() !== "custom");
+  }
+
+  function handleModalBackdropClick(event) {
+    if (event.target === els.editModal) {
+      closeEditModal();
+    }
+  }
+
+  function handleEscapeKey(event) {
+    if (event.key === "Escape" && !els.editModal.classList.contains("hidden")) {
+      closeEditModal();
     }
   }
 
@@ -257,7 +344,10 @@
             <td data-label="負担方法">${escapeHtml(splitMode)}</td>
             <td class="num" data-label="金額">${formatMoney(expense.amount)}</td>
             <td class="num" data-label="操作">
-              <button class="icon-btn danger-btn" type="button" data-expense-action="delete" data-id="${escapeHtml(expense.id)}">削除</button>
+              <div class="row-actions">
+                <button class="icon-btn" type="button" data-expense-action="edit" data-id="${escapeHtml(expense.id)}">編集</button>
+                <button class="icon-btn danger-btn" type="button" data-expense-action="delete" data-id="${escapeHtml(expense.id)}">削除</button>
+              </div>
             </td>
           </tr>
         `;
@@ -293,6 +383,73 @@
   function getAvailableMonths() {
     const months = Array.from(new Set(state.data.expenses.map((expense) => toMonthKey(expense.date))));
     return months.sort((a, b) => b.localeCompare(a));
+  }
+
+  function openEditModal(id) {
+    const expense = state.data.expenses.find((item) => item.id === id);
+    if (!expense) return;
+
+    els.editId.value = expense.id;
+    els.editDate.value = expense.date;
+    els.editItem.value = expense.item;
+    els.editCategory.value = expense.category;
+    els.editAmount.value = String(expense.amount);
+    renderEditPayerOptions(expense.payerId);
+    setEditSplitMode(expense.splitMode);
+    renderEditCustomShares(expense);
+    els.editCustomShares.classList.toggle("hidden", expense.splitMode !== "custom");
+    els.editModal.classList.remove("hidden");
+    els.editItem.focus();
+  }
+
+  function closeEditModal() {
+    els.editModal.classList.add("hidden");
+    els.editForm.reset();
+    els.editCustomShares.innerHTML = "";
+  }
+
+  function renderEditPayerOptions(selectedId) {
+    els.editPayer.innerHTML = state.data.people
+      .map((person) => `<option value="${escapeHtml(person.id)}">${escapeHtml(person.name)}</option>`)
+      .join("");
+    els.editPayer.value = selectedId;
+  }
+
+  function renderEditCustomShares(expense) {
+    els.editCustomShares.innerHTML = state.data.people
+      .map((person) => {
+        const value = expense.splitMode === "custom" ? Number(expense.shares[person.id] || 0) : Number(person.share || 0);
+        return `
+          <label>
+            ${escapeHtml(person.name)}の負担割合
+            <div class="input-with-unit">
+              <input type="number" min="0" max="100" step="1" value="${value}" data-edit-share-id="${escapeHtml(person.id)}" />
+              <span>%</span>
+            </div>
+          </label>
+        `;
+      })
+      .join("");
+  }
+
+  function readEditCustomShares() {
+    return Array.from(els.editCustomShares.querySelectorAll("input[data-edit-share-id]")).reduce((result, input) => {
+      result[input.dataset.editShareId] = clamp(Number(input.value || 0), 0, 100);
+      return result;
+    }, {});
+  }
+
+  function getEditSplitMode() {
+    const checked = els.editForm.querySelector('input[name="editSplitMode"]:checked');
+    return checked ? checked.value : "default";
+  }
+
+  function setEditSplitMode(splitMode) {
+    const value = splitMode === "custom" ? "custom" : "default";
+    const input = els.editForm.querySelector(`input[name="editSplitMode"][value="${value}"]`);
+    if (input) {
+      input.checked = true;
+    }
   }
 
   function normalizeData() {
