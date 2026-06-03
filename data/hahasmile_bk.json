@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-06-01T23:36:53.803Z"
+    "updatedAt": "2026-06-03T04:00:51.789Z"
   },
   "settings": {
     "currency": "JPY",
@@ -43,6 +43,16 @@
       "item": "ガスホース+ソケット+物干し",
       "category": "日用品",
       "amount": 4729,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mpxjgoxi-4aihzd",
+      "date": "2026-06-03",
+      "item": "豚ヒレ",
+      "category": "食費",
+      "amount": 665,
       "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
