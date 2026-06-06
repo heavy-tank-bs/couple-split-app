@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-06-03T04:02:00.896Z"
+    "updatedAt": "2026-06-06T07:37:56.819Z"
   },
   "settings": {
     "currency": "JPY",
@@ -63,6 +63,46 @@
       "item": "キッチン周り",
       "category": "日用品",
       "amount": 1100,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mq21ho31-kjsbe2",
+      "date": "2026-06-03",
+      "item": "野菜",
+      "category": "食費",
+      "amount": 274,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mq21hzq3-1prgls",
+      "date": "2026-06-03",
+      "item": "バナナ",
+      "category": "食費",
+      "amount": 150,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mq21ilna-lg7wba",
+      "date": "2026-06-03",
+      "item": "カレー",
+      "category": "食費",
+      "amount": 1882,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mq21iwda-64f1zm",
+      "date": "2026-06-03",
+      "item": "塩",
+      "category": "食費",
+      "amount": 118,
       "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
