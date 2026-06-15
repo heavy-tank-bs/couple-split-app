@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-06-15T13:52:50.353Z"
+    "updatedAt": "2026-06-15T13:56:44.833Z"
   },
   "settings": {
     "currency": "JPY",
@@ -215,6 +215,16 @@
       "item": "収納グッズ",
       "category": "日用品",
       "amount": 770,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mqfa1ak9-jzlivt",
+      "date": "2026-06-15",
+      "item": "Wi-Fi代",
+      "category": "通信費",
+      "amount": 4810,
       "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
