@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-06-12T12:58:28.172Z"
+    "updatedAt": "2026-06-15T13:52:36.509Z"
   },
   "settings": {
     "currency": "JPY",
@@ -108,17 +108,69 @@
       "shares": {}
     },
     {
-      "id": "exp-mqaxl644-5fbmtm",
-      "date": "2026-06-12",
-      "item": "生姜焼きとささみ",
+      "id": "exp-mqaxf8hs-jpelkn",
+      "date": "2026-06-06",
+      "item": "カレーのささみ",
       "category": "食費",
-      "amount": 1710,
+      "amount": 930,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "custom",
+      "shares": {
+        "person-mpuohohw-11klb7": 50,
+        "person-mpuohrkw-30ffkd": 50
+      }
+    },
+    {
+      "id": "exp-mqaxfjji-z6l4ii",
+      "date": "2026-06-06",
+      "item": "塩",
+      "category": "食費",
+      "amount": 118,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "custom",
+      "shares": {
+        "person-mpuohohw-11klb7": 50,
+        "person-mpuohrkw-30ffkd": 50
+      }
+    },
+    {
+      "id": "exp-mqaxfzdd-dqzc6z",
+      "date": "2026-06-06",
+      "item": "カレーの野菜",
+      "category": "食費",
+      "amount": 952,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "custom",
+      "shares": {
+        "person-mpuohohw-11klb7": 50,
+        "person-mpuohrkw-30ffkd": 50
+      }
+    },
+    {
+      "id": "exp-mqaxgjxk-ucyb3i",
+      "date": "2026-06-12",
+      "item": "肉類",
+      "category": "食費",
+      "amount": 1362,
       "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
     },
     {
-      "id": "exp-mqaxleh8-a7ds25",
+      "id": "exp-mqaxgw32-vnj908",
+      "date": "2026-06-12",
+      "item": "塩麹としょうが",
+      "category": "食費",
+      "amount": 323,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "custom",
+      "shares": {
+        "person-mpuohohw-11klb7": 50,
+        "person-mpuohrkw-30ffkd": 50
+      }
+    },
+    {
+      "id": "exp-mqaxheu0-cvjukw",
       "date": "2026-06-11",
       "item": "鯖の味噌煮",
       "category": "食費",
@@ -128,11 +180,41 @@
       "shares": {}
     },
     {
-      "id": "exp-mqaxm4o5-p897im",
-      "date": "2026-06-06",
-      "item": "カレー",
+      "id": "exp-mqf9ty8y-rwwcl5",
+      "date": "2026-06-14",
+      "item": "卵・めんつゆなど",
       "category": "食費",
-      "amount": 2009,
+      "amount": 1153,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mqf9v4hl-wd5jgf",
+      "date": "2026-06-14",
+      "item": "野菜類",
+      "category": "食費",
+      "amount": 636,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mqf9vh49-dbn3so",
+      "date": "2026-06-14",
+      "item": "豚バラ",
+      "category": "食費",
+      "amount": 756,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mqf9vs3x-vnll9m",
+      "date": "2026-06-14",
+      "item": "収納グッズ",
+      "category": "日用品",
+      "amount": 770,
       "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
