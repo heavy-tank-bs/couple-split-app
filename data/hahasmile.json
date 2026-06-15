@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-06-15T13:56:44.833Z"
+    "updatedAt": "2026-06-15T13:57:55.127Z"
   },
   "settings": {
     "currency": "JPY",
@@ -226,6 +226,16 @@
       "category": "通信費",
       "amount": 4810,
       "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mqfa2thz-3mcj6o",
+      "date": "2026-06-09",
+      "item": "栓抜き",
+      "category": "食費",
+      "amount": 110,
+      "payerId": "person-mpuohohw-11klb7",
       "splitMode": "default",
       "shares": {}
     }
