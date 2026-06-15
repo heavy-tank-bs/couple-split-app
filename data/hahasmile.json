@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-06-15T13:57:55.127Z"
+    "updatedAt": "2026-06-15T13:59:57.554Z"
   },
   "settings": {
     "currency": "JPY",
@@ -230,10 +230,10 @@
       "shares": {}
     },
     {
-      "id": "exp-mqfa2thz-3mcj6o",
+      "id": "exp-mqfa5eyn-dgxkjw",
       "date": "2026-06-09",
       "item": "栓抜き",
-      "category": "食費",
+      "category": "日用品",
       "amount": 110,
       "payerId": "person-mpuohohw-11klb7",
       "splitMode": "default",
