@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-06-29T04:01:07.562Z"
+    "updatedAt": "2026-06-29T12:49:57.462Z"
   },
   "settings": {
     "currency": "JPY",
@@ -288,6 +288,26 @@
       "item": "家賃",
       "category": "家賃",
       "amount": 127850,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mqz7rkv3-iaf0sx",
+      "date": "2026-06-27",
+      "item": "まいばすけっと",
+      "category": "食費",
+      "amount": 515,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mqz7t7k8-29hqop",
+      "date": "2026-06-29",
+      "item": "ガス代",
+      "category": "光熱費",
+      "amount": 1831,
       "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
