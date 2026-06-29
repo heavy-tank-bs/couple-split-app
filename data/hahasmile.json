@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-06-24T22:57:13.078Z"
+    "updatedAt": "2026-06-29T03:56:11.171Z"
   },
   "settings": {
     "currency": "JPY",
@@ -281,6 +281,16 @@
         "person-mpuohohw-11klb7": 25,
         "person-mpuohrkw-30ffkd": 75
       }
+    },
+    {
+      "id": "exp-mqyoqf1f-vvbpg6",
+      "date": "2026-06-29",
+      "item": "家賃",
+      "category": "家賃",
+      "amount": 127850,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
     }
   ]
 }
