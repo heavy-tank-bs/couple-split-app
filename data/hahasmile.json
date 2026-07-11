@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-06-29T13:32:58.347Z"
+    "updatedAt": "2026-07-11T13:24:55.874Z"
   },
   "settings": {
     "currency": "JPY",
@@ -308,6 +308,26 @@
       "item": "ガス代",
       "category": "光熱費",
       "amount": 1831,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mrgduf5a-9ld05a",
+      "date": "2026-07-09",
+      "item": "バナナ",
+      "category": "食費",
+      "amount": 129,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mrgdvqvn-wxl6l2",
+      "date": "2026-07-11",
+      "item": "まいばす",
+      "category": "食費",
+      "amount": 527,
       "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
