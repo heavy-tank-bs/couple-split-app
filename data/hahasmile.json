@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-07-11T13:24:55.874Z"
+    "updatedAt": "2026-07-12T02:31:20.093Z"
   },
   "settings": {
     "currency": "JPY",
@@ -328,6 +328,62 @@
       "item": "まいばす",
       "category": "食費",
       "amount": 527,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mrgehjpe-xunr5p",
+      "date": "2026-07-11",
+      "item": "Wi-Fi",
+      "category": "通信費",
+      "amount": 4810,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mrgej2a4-73soxk",
+      "date": "2026-07-11",
+      "item": "くらしのマーケット",
+      "category": "その他",
+      "amount": 22300,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "custom",
+      "shares": {
+        "person-mpuohohw-11klb7": 50,
+        "person-mpuohrkw-30ffkd": 50
+      }
+    },
+    {
+      "id": "exp-mrgejqzd-6kdk5k",
+      "date": "2026-07-11",
+      "item": "プロテインギョーザ",
+      "category": "食費",
+      "amount": 4098,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mrgekpcc-ljvj8f",
+      "date": "2026-07-11",
+      "item": "シフォンケーキ",
+      "category": "日用品",
+      "amount": 2968,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "custom",
+      "shares": {
+        "person-mpuohohw-11klb7": 50,
+        "person-mpuohrkw-30ffkd": 50
+      }
+    },
+    {
+      "id": "exp-mrh6fpne-x94jau",
+      "date": "2026-07-12",
+      "item": "牛乳",
+      "category": "食費",
+      "amount": 189,
       "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
