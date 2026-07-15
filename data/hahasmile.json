@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-07-12T02:31:23.972Z"
+    "updatedAt": "2026-07-15T14:11:46.069Z"
   },
   "settings": {
     "currency": "JPY",
@@ -387,6 +387,62 @@
       "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
+    },
+    {
+      "id": "exp-mrm5m4gh-dbn04p",
+      "date": "2026-07-13",
+      "item": "芳香剤・洗剤",
+      "category": "日用品",
+      "amount": 7022,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mrm5ovlf-buoyqr",
+      "date": "2026-07-15",
+      "item": "ペーパータオルとか",
+      "category": "日用品",
+      "amount": 330,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mrm5pe6t-0wbl8r",
+      "date": "2026-07-11",
+      "item": "道の駅",
+      "category": "外食",
+      "amount": 293,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mrm5r5al-ezuy3y",
+      "date": "2026-07-15",
+      "item": "お米",
+      "category": "食費",
+      "amount": 3218,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "custom",
+      "shares": {
+        "person-mpuohohw-11klb7": 25,
+        "person-mpuohrkw-30ffkd": 75
+      }
+    },
+    {
+      "id": "exp-mrm5rsjh-o1ck8i",
+      "date": "2026-07-15",
+      "item": "トイレットペーパー",
+      "category": "日用品",
+      "amount": 327,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "custom",
+      "shares": {
+        "person-mpuohohw-11klb7": 50,
+        "person-mpuohrkw-30ffkd": 50
+      }
     }
   ]
 }
