@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-07-22T11:01:39.369Z"
+    "updatedAt": "2026-07-22T14:05:52.483Z"
   },
   "settings": {
     "currency": "JPY",
@@ -481,6 +481,16 @@
       "category": "食費",
       "amount": 587,
       "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mrw5lzoj-z0nr81",
+      "date": "2026-07-16",
+      "item": "ガス代",
+      "category": "光熱費",
+      "amount": 3178,
+      "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
     }
