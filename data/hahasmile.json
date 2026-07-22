@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-07-15T14:11:46.069Z"
+    "updatedAt": "2026-07-22T11:01:39.369Z"
   },
   "settings": {
     "currency": "JPY",
@@ -443,6 +443,46 @@
         "person-mpuohohw-11klb7": 50,
         "person-mpuohrkw-30ffkd": 50
       }
+    },
+    {
+      "id": "exp-mrvz176m-s5u7gm",
+      "date": "2026-07-22",
+      "item": "片栗粉",
+      "category": "食費",
+      "amount": 150,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mrvz1fy8-3ywra1",
+      "date": "2026-07-22",
+      "item": "麻婆茄子",
+      "category": "食費",
+      "amount": 1662,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mrvz24vb-scyku4",
+      "date": "2026-07-19",
+      "item": "冷しゃぶ",
+      "category": "食費",
+      "amount": 1401,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mrvz2ktw-54dqih",
+      "date": "2026-07-19",
+      "item": "野菜",
+      "category": "食費",
+      "amount": 587,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
     }
   ]
 }
