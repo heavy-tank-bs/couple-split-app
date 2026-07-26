@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-07-22T14:05:52.483Z"
+    "updatedAt": "2026-07-26T07:44:16.242Z"
   },
   "settings": {
     "currency": "JPY",
@@ -490,6 +490,86 @@
       "item": "ガス代",
       "category": "光熱費",
       "amount": 3178,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-ms1hk7tn-18o37i",
+      "date": "2026-07-25",
+      "item": "副菜系",
+      "category": "食費",
+      "amount": 1573,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-ms1hkyi2-4lk13i",
+      "date": "2026-07-23",
+      "item": "バナナと卵",
+      "category": "食費",
+      "amount": 398,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-ms1hloq3-exjxzm",
+      "date": "2026-07-25",
+      "item": "朝ごはん系",
+      "category": "食費",
+      "amount": 815,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-ms1hovee-z9lfr6",
+      "date": "2026-07-25",
+      "item": "アイスコーヒー",
+      "category": "食費",
+      "amount": 354,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-ms1hpff6-3ghyer",
+      "date": "2026-07-25",
+      "item": "シフォンケーキ系",
+      "category": "日用品",
+      "amount": 440,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-ms1hqq9n-u1fugc",
+      "date": "2026-07-26",
+      "item": "タッパー",
+      "category": "日用品",
+      "amount": 440,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-ms1hr0o2-l7v3ut",
+      "date": "2026-07-26",
+      "item": "ポコテイン",
+      "category": "食費",
+      "amount": 751,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-ms1hs7xy-dtu1wv",
+      "date": "2026-07-26",
+      "item": "うなぎと焼き鳥",
+      "category": "食費",
+      "amount": 3520,
       "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
