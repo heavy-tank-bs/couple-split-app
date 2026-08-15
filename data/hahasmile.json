@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-08-05T13:58:15.543Z"
+    "updatedAt": "2026-08-15T04:40:06.359Z"
   },
   "settings": {
     "currency": "JPY",
@@ -621,6 +621,86 @@
       "category": "食費",
       "amount": 645,
       "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mslsyrj3-avfynf",
+      "date": "2026-07-22",
+      "item": "電気代",
+      "category": "光熱費",
+      "amount": 420,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mstvxnu3-wmisqq",
+      "date": "2026-08-09",
+      "item": "もやし",
+      "category": "食費",
+      "amount": 31,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mstvy74j-6stl8x",
+      "date": "2026-08-09",
+      "item": "冷しゃぶ",
+      "category": "食費",
+      "amount": 682,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mstvyk7s-pjz5tj",
+      "date": "2026-08-11",
+      "item": "メリット",
+      "category": "日用品",
+      "amount": 501,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mstvzdx7-0f1798",
+      "date": "2026-08-09",
+      "item": "食材",
+      "category": "食費",
+      "amount": 758,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mstvzt6f-lquzcw",
+      "date": "2026-08-15",
+      "item": "冷しゃぶ",
+      "category": "食費",
+      "amount": 480,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mstw01tf-xf1t4g",
+      "date": "2026-08-14",
+      "item": "味噌汁",
+      "category": "食費",
+      "amount": 169,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mstw0a50-plpc3p",
+      "date": "2026-08-14",
+      "item": "鯖",
+      "category": "食費",
+      "amount": 602,
+      "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
     }
