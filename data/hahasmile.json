@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-08-15T04:40:06.359Z"
+    "updatedAt": "2026-08-15T04:42:33.035Z"
   },
   "settings": {
     "currency": "JPY",
@@ -700,6 +700,16 @@
       "item": "鯖",
       "category": "食費",
       "amount": 602,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mstw3fl0-a4si30",
+      "date": "2026-08-15",
+      "item": "wifi",
+      "category": "通信費",
+      "amount": 4810,
       "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
