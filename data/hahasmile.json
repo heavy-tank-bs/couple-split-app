@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-08-15T04:42:33.035Z"
+    "updatedAt": "2026-08-20T14:33:09.018Z"
   },
   "settings": {
     "currency": "JPY",
@@ -711,6 +711,86 @@
       "category": "通信費",
       "amount": 4810,
       "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mt1m6mx9-c89dvi",
+      "date": "2026-08-19",
+      "item": "卵",
+      "category": "食費",
+      "amount": 301,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mt1m70yl-uh9596",
+      "date": "2026-08-18",
+      "item": "スポンジ",
+      "category": "食費",
+      "amount": 110,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mt1m7qti-m4g729",
+      "date": "2026-08-14",
+      "item": "生姜",
+      "category": "食費",
+      "amount": 106,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mt1m96ao-447r3s",
+      "date": "2026-08-17",
+      "item": "副菜+醤油",
+      "category": "食費",
+      "amount": 903,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mt1ma4yb-d14opn",
+      "date": "2026-08-16",
+      "item": "卵",
+      "category": "食費",
+      "amount": 376,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mt1mbe18-wvl86r",
+      "date": "2026-08-16",
+      "item": "生ゴミ脱臭",
+      "category": "日用品",
+      "amount": 327,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mt1mcuck-qfkbom",
+      "date": "2026-08-16",
+      "item": "ベンザブロック",
+      "category": "日用品",
+      "amount": 1867,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mt1me9l0-61lii2",
+      "date": "2026-08-16",
+      "item": "副菜",
+      "category": "食費",
+      "amount": 1432,
+      "payerId": "person-mpuohohw-11klb7",
       "splitMode": "default",
       "shares": {}
     }
