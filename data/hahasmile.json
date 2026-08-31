@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-08-20T14:33:09.018Z"
+    "updatedAt": "2026-08-31T10:51:47.527Z"
   },
   "settings": {
     "currency": "JPY",
@@ -791,6 +791,129 @@
       "category": "食費",
       "amount": 1432,
       "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mth43whw-vju89s",
+      "date": "2026-08-24",
+      "item": "電気代",
+      "category": "光熱費",
+      "amount": 4617,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mth44gtw-bjs1r7",
+      "date": "2026-08-24",
+      "item": "卵",
+      "category": "食費",
+      "amount": 301,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mth44y25-4l0t5n",
+      "date": "2026-08-25",
+      "item": "もやし",
+      "category": "食費",
+      "amount": 62,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mth459i6-t11xfo",
+      "date": "2026-08-28",
+      "item": "刺身",
+      "category": "食費",
+      "amount": 810,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mth461uh-hrey31",
+      "date": "2026-08-29",
+      "item": "副菜",
+      "category": "食費",
+      "amount": 493,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mth46j3b-xz85vr",
+      "date": "2026-08-22",
+      "item": "掃除用品",
+      "category": "日用品",
+      "amount": 1245,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mth47e21-ofwaen",
+      "date": "2026-08-22",
+      "item": "豚しゃぶ",
+      "category": "日用品",
+      "amount": 1064,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mth47pv2-vl25nm",
+      "date": "2026-08-22",
+      "item": "もやし",
+      "category": "食費",
+      "amount": 38,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mth486y9-5u2gi7",
+      "date": "2026-08-22",
+      "item": "米",
+      "category": "食費",
+      "amount": 2786,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "custom",
+      "shares": {
+        "person-mpuohohw-11klb7": 25,
+        "person-mpuohrkw-30ffkd": 75
+      }
+    },
+    {
+      "id": "exp-mth48rol-falyyw",
+      "date": "2026-08-19",
+      "item": "ビオレ",
+      "category": "日用品",
+      "amount": 306,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mth4ajgk-v54ekj",
+      "date": "2026-08-31",
+      "item": "ガス代",
+      "category": "光熱費",
+      "amount": 3834,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mth4bzal-ju49cn",
+      "date": "2026-08-31",
+      "item": "ゴキブリ撃退",
+      "category": "日用品",
+      "amount": 2240,
+      "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
     }
