@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-08-31T10:51:59.628Z"
+    "updatedAt": "2026-09-05T02:36:29.410Z"
   },
   "settings": {
     "currency": "JPY",
@@ -913,6 +913,16 @@
       "item": "ゴキブリ撃退",
       "category": "日用品",
       "amount": 2240,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mtnru486-g9jyht",
+      "date": "2026-09-05",
+      "item": "魚屋",
+      "category": "食費",
+      "amount": 5844,
       "payerId": "person-mpuohrkw-30ffkd",
       "splitMode": "default",
       "shares": {}
