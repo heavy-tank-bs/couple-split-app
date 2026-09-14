@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-09-05T02:36:29.410Z"
+    "updatedAt": "2026-09-14T13:12:48.518Z"
   },
   "settings": {
     "currency": "JPY",
@@ -924,6 +924,66 @@
       "category": "食費",
       "amount": 5844,
       "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mtxpo5d7-d2dt0d",
+      "date": "2026-08-31",
+      "item": "ゴミ袋",
+      "category": "日用品",
+      "amount": 110,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mtxppbph-3rghye",
+      "date": "2026-09-01",
+      "item": "銀鮭",
+      "category": "食費",
+      "amount": 780,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mtxppswv-j6vn23",
+      "date": "2026-09-10",
+      "item": "卵",
+      "category": "食費",
+      "amount": 301,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mtxpq1ze-o1ob6u",
+      "date": "2026-09-07",
+      "item": "卵",
+      "category": "食費",
+      "amount": 301,
+      "payerId": "person-mpuohohw-11klb7",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mtxpr1w0-1fp03s",
+      "date": "2026-09-03",
+      "item": "わかめ",
+      "category": "食費",
+      "amount": 419,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "default",
+      "shares": {}
+    },
+    {
+      "id": "exp-mtxpsgds-6moo10",
+      "date": "2026-09-11",
+      "item": "副菜",
+      "category": "食費",
+      "amount": 952,
+      "payerId": "person-mpuohohw-11klb7",
       "splitMode": "default",
       "shares": {}
     }
