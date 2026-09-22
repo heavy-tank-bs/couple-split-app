@@ -1,7 +1,7 @@
 {
   "meta": {
     "appVersion": "1.0.0",
-    "updatedAt": "2026-09-14T13:12:48.518Z"
+    "updatedAt": "2026-09-22T08:54:10.594Z"
   },
   "settings": {
     "currency": "JPY",
@@ -986,6 +986,19 @@
       "payerId": "person-mpuohohw-11klb7",
       "splitMode": "default",
       "shares": {}
+    },
+    {
+      "id": "exp-mucfsm6b-y0otsi",
+      "date": "2026-09-22",
+      "item": "差額分",
+      "category": "食費",
+      "amount": 3000,
+      "payerId": "person-mpuohrkw-30ffkd",
+      "splitMode": "custom",
+      "shares": {
+        "person-mpuohohw-11klb7": 100,
+        "person-mpuohrkw-30ffkd": 0
+      }
     }
   ]
 }
